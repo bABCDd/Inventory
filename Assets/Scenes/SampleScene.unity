@@ -4462,7 +4462,7 @@ GameObject:
   - component: {fileID: 1346170092}
   - component: {fileID: 1346170091}
   m_Layer: 0
-  m_Name: Square
+  m_Name: WhatSquare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4510,7 +4510,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4529,7 +4529,7 @@ Transform:
   m_GameObject: {fileID: 1346170090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 283.58295, y: 487.66296, z: 0}
+  m_LocalPosition: {x: 451, y: 487.66296, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4696,18 +4696,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a73d3f36d2d0a4e916723e76331a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uIMainMenu: {fileID: 1377533187}
-  uIStatus: {fileID: 1001454994}
-  uIInventory: {fileID: 1175366467}
   IDText: {fileID: 388276833}
   CurrentLv: {fileID: 499837445}
   CurrentExp: {fileID: 161611967}
   CurrentGold: {fileID: 2027626144}
+  Name: {fileID: 1173778936}
   ExpImgFilled: {fileID: 1069150175}
   StatusBtn: {fileID: 2028113146}
   InventoryBtn: {fileID: 1299725567}
   CloseStatusbtn: {fileID: 1245546608}
   CloseInventorybtn: {fileID: 1753479625}
+  uiManager: {fileID: 1125556463}
 --- !u!1001 &1426148343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6202,6 +6201,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028113144}
   m_CullTransparentMesh: 1
+--- !u!1 &2033484892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033484894}
+  - component: {fileID: 2033484893}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2033484893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033484892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24447c5f0088bba40bb7c02ca4403197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2033484894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033484892}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 888.8052, y: 556.387, z: 17.658648}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2041015892
 GameObject:
   m_ObjectHideFlags: 0
@@ -6742,3 +6785,4 @@ SceneRoots:
   - {fileID: 154448792}
   - {fileID: 1346170092}
   - {fileID: 1125556464}
+  - {fileID: 2033484894}

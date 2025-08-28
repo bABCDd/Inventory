@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
     public UIStatus UiStatus => uiStatus;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (instance == null)
         {
@@ -28,5 +28,21 @@ public class UIManager : MonoBehaviour
 /*        uiInventory.gameObject.SetActive(false);
         uiStatus.gameObject.SetActive(false);*/
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void OpenStatus()
+    {
+        UiStatus.gameObject.SetActive(true);
+    }
+
+    public void OpenInventory()
+    {
+        UiInventory.gameObject.SetActive(true);
+    }
+
+    public void closeBtn()
+    {
+        UiStatus.gameObject.SetActive(false);
+        UiInventory.gameObject.SetActive(false);
     }
 }

@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameManager instance;
+    [SerializeField] Player player;
+
+    public Player Player => player;
+
+    void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+        SetData();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetData()
     {
-        
+        player = new Player("CodeSllave", "Kim", 30, 10, 100, 10, 2, 9, 10000);
     }
 }
