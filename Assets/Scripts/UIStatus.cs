@@ -9,5 +9,11 @@ public class UIStatus : MonoBehaviour
     public TextMeshProUGUI Shield;
     public TextMeshProUGUI Health;
     public TextMeshProUGUI Critical;
-    public TextMeshProUGUI Gold;
+    public UIMainMenu uiMainMenu;
+
+    //여기도 생성자를 만들어야하나?
+    void Start()
+    {
+
+    }
 }

@@ -4,19 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
+    public static UIManager instance;
+
     [SerializeField] UIMainMenu uiMainMenu;
     [SerializeField] UIInventory uiInventory;
     [SerializeField] UIStatus uiStatus;
 
+    public UIMainMenu UiMainMenu => uiMainMenu;
+    public UIInventory UiInventory => uiInventory;
+    public UIStatus UiStatus => uiStatus;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+/*        uiInventory.gameObject.SetActive(false);
+        uiStatus.gameObject.SetActive(false);*/
+        DontDestroyOnLoad(gameObject);
     }
 }
