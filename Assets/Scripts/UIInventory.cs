@@ -10,9 +10,4 @@ public class UIInventory : MonoBehaviour
     public TextMeshProUGUI CurrentSlot;
     public Image ItemImg;
     public UIMainMenu uiMainMenu;
-
-    private void Start()
-    {
-        
-    }
 }
